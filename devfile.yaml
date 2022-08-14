@@ -17,6 +17,9 @@ components:
       volumeMounts:
         - name: m2
           path: /home/jboss
+    - name: m2
+    volume:
+      size: 1G
       endpoints:
         - name: spring-music
           targetPort: 8080
