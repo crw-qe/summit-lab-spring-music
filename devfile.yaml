@@ -16,13 +16,12 @@ components:
       memoryLimit: 2048Mi
       volumeMounts:
         - name: m2
-          path: /home/jboss
-    - name: m2
-    volume:
-      size: 1G
+          path: /home/jboss/.m2
       endpoints:
         - name: spring-music
           targetPort: 8080
+  - name: m2
+    volume: {}
 commands:
   - id: build
     exec:
